@@ -12,26 +12,27 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
+    min-height: 100vh;
     background-color: #efefef
 
 }
 
 header{
-    display:flex;
+    text-align:center;
+    display:inline-block;
     align-items: center;
     justify-content: space-between;
     padding:10px;
+    border-bottom: 1.5px solid #000000;
 
 }
-.search-btn{
-    align-items: flex-start;
-}
 
-header h1{
-    margin:0;
-}
-
-header button{
+.header-btn{
+    border:none;
+    padding:10px 20px;
+    border-radius: 5px;
+    cursor:pointer;
+    font-size:16px;
 
 }
 
@@ -45,4 +46,12 @@ footer {
     color: #fff;
     text-align: center;
     padding: 10px;
+}
+
+@media (min-width: 768px) {
+    header {
+        justify-content: space-around;
+    }
+
+
 }
