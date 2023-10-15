@@ -1,0 +1,99 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: calc(1em + 1vw);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: #efefef;
+}
+
+#grid-container {
+    display: grid;
+    grid-template-areas:
+        "top"
+        "content"
+        "bottom";
+    grid-template-rows: auto auto 1fr;
+}
+
+header {
+    grid-area: top;
+    text-align: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1.5px solid #000000;
+}
+
+.logo {
+    text-decoration:none;
+    color: #DDF15C;
+    -webkit-text-stroke-color:#000000;
+    -webkit-text-stroke-width:1.3px;
+    font-size: 27px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+}
+
+.header-btn {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+main {
+    grid-area: content;
+    padding: 20px;
+    flex:1;
+}
+
+.default-flex article {
+    text-align: center;
+    position: relative;
+}
+
+.default-flex article img {
+    max-width: 100%;
+}
+
+.default-flex article h3 {
+    position:absolute;
+    top:-10px;
+    left:50%;
+    transform:translateX(-50%); /*foreslått av chatGPT for å sentrere elementer horisontalt*/
+    font-size:26px;
+
+}
+
+footer {
+    grid-area: bottom;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+ul.footer-content {
+    display: inline-block;
+    text-align: center;
+    list-style-type: none;
+    padding: 0;
+}
+
+@media (min-width: 768px) {
+    .logo {
+        font-size: 48px;
+    }
+}

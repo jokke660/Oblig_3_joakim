@@ -17,11 +17,33 @@ body{
 
 }
 
+#grid-container{
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:"top"
+                        "content"
+                        "bottom";
+
+}
+
+header{
+    grid-area:top;
+}
+
+main{
+    grid-area:content;
+}
+
+footer{
+    grid-area:bottom;
+}
+
 header{
     text-align:center;
-    display:inline-block;
-    align-items: center;
-    justify-content: space-between;
+    display:inline;
+    align-items:baseline;
+    justify-content:space-between;
     padding:10px;
     border-bottom: 1.5px solid #000000;
 
@@ -50,9 +72,31 @@ header{
 }
 
 main {
-    flex:1;
+    min-height:100%;
     padding: 20px;
+
 }
+
+
+.default-flex article{
+    text-align:center;
+    position:relative;
+    padding-bottom:15px;
+
+}
+
+.default-flex article img{
+    max-width:100%;
+}
+
+.default-flex article h3{
+    position:absolute;
+    top:-10px;
+    left:50%;
+    transform:translateX(-50%); /*foreslått av chatGPT for å sentrere elementer horisontalt*/
+    font-size:26px;
+}
+
 
 footer {
     background-color: #333;
