@@ -2,31 +2,63 @@
 <html lang="nb">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width", initial-scale="1.0">
-        <link rel="stylesheet" href="css/styleindex.css" type="text/css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" type="text/css">
+        <link href="css/font/css/fontawesome.css" rel="stylesheet">
+        <link href="css/font/css/brands.css" rel="stylesheet">
+        <link href="css/font/css/solid.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/styleindex2.css" type="text/css">
         <script src="https://kit.fontawesome.com/8d18eb631b.js" crossorigin="anonymous"></script>
-        <title>Forside</title>
+        <title>Produkt</title>
 
     </head>
     <body>
+    <div id="grid-container">
         <header>
-            <h1>Skobutikk</h1>
-            <nav class="menu">
-                <button>☰</button>
-                <button>⌕</button>
-                <button>profil</button>
-                <ul>
-                    
-               </ul>
+            <!--header mobil-->
+            <div class="menu">
+                <section>
+                    <nav>
+                        <i class="fa-solid fa-bars"></i>
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </nav>
+                    <a href="index.html" class="logo">SKOBUTIKK</a>
+                    <nav>
+                        <i class="fa-regular fa-user"></i>
+                        <a href="handlekurv.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </nav>
+                </section>
+            </div>
+            <!--header desktop-->
+            <div class="menu-desktop">
+                <section>
+                    <a href="index.html" class="logo">SKOBUTIKK</a>
+                    <input type="text" placeholder="Søk">
+                    <img src="img/logginn.jpg">
+                    <img src="img/handlekurv.jpg">
 
-            </nav>
-
+                </section>
+            </div>
         </header>
-
+ 
         <main>
+            <section class="default-flex"> 
+
+            </section>
 
         </main>
+        <footer>
+            <nav class="footer-container">
+                <ul class="footer-content">
+                    <li>Om oss</li>
+                    <li>Kontakt oss</li>
+                    <li>Kundeservice</li>
+                    <li>Kjøpsvilkår</li>
+                </ul>
+            </nav>
 
+        </footer>
+    </div>
     </body>
 
 </html>

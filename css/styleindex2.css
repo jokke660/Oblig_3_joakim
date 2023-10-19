@@ -1,99 +1,216 @@
 * {
-    box-sizing: border-box;
+    box-sizing:border-box;
 }
 
 html {
     font-size: calc(1em + 1vw);
 }
 
-body {
-    display: flex;
-    flex-direction: column;
+body{
+    display:flex;
+    flex-direction:column;
     font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    padding: 0;
+    margin:0;
+    padding:0;
     min-height: 100vh;
     background-color: #efefef;
 }
 
 #grid-container {
-    display: grid;
-    grid-template-areas:
-        "top"
-        "content"
-        "bottom";
-    grid-template-rows: auto auto 1fr;
+    display:grid;
+    grid-template-areas: "top" "content" "bottom";
+    margin:0;
+    padding:0;
+    overflow:hidden;
 }
 
 header {
-    grid-area: top;
-    text-align: center;
-    justify-content: space-between;
-    padding: 10px;
+    grid-area:top;
     border-bottom: 1.5px solid #000000;
+    padding:15px;
 }
+
+.nav-section-desktop{
+    display:none;
+}
+
+
+.menu section{
+    display: flex;
+    justify-content: space-between; /*Sprer elementene jevnt ut i header. De første elementene i HTML starter mot venstre*/
+    align-items:baseline; /*Setter alle elementene langs samme linje*/
+}
+
+.menu section nav{
+    display:flex;
+    gap:1em;
+    
+}
+
+.menu section nav input{
+    display:none;
+}
+
+.menu-desktop section{
+    display:flex;
+    justify-content: space-between;
+    align-items:baseline;
+
+}
+
+.menu-desktop section nav{
+    display:flex;
+    gap:1em;
+
+}
+
+.menu-desktop section img{
+    width:160px;
+
+}
+
+.menu-desktop{
+    display:none;
+}
+
 
 .logo {
     text-decoration:none;
     color: #DDF15C;
     -webkit-text-stroke-color:#000000;
     -webkit-text-stroke-width:1.3px;
-    font-size: 27px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-
+    font-size:30px;
+    font-style:normal;
+    font-weight:400;
 }
 
-.header-btn {
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-}
 
 main {
-    grid-area: content;
-    padding: 20px;
+    grid-area:content;
+    padding:20px;
     flex:1;
 }
 
+main section article nav{
+    display:flex;
+    justify-content:space-between;
+    position:absolute;
+    top: 175px;
+    left:50%;
+    transform:translateX(-50%);
+    
+}
+
+.default-flex{
+    display:flex;
+    flex-direction:column;
+}
+
 .default-flex article {
-    text-align: center;
-    position: relative;
+    text-align:center;
+    position:relative;
+    margin-bottom:15px;
 }
 
 .default-flex article img {
     max-width: 100%;
 }
 
-.default-flex article h3 {
+.default-flex article h2 {
     position:absolute;
-    top:-10px;
+    top:10px;
     left:50%;
-    transform:translateX(-50%); /*foreslått av chatGPT for å sentrere elementer horisontalt*/
+    transform:translateX(-50%);
+    font-size:26px;
+    color:#efefef;
+}
+
+#main-article p{
+    position:absolute;
+    top:20px;
+    left:50%;
+    transform:translateX(-50%);
     font-size:26px;
 
 }
 
+.default-flex article h3 {
+    position:absolute;
+    top:-10px;
+    left:50%;
+    transform:translateX(-50%); /*foreslått av chatGPT for å sentrere elementer. X i translateX vil si X-aksen, som verdien i parentesen flytter elementet langs.*/
+    font-size:26px;
+}
+
 footer {
-    grid-area: bottom;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
+    grid-area:bottom;
+    background-color:#333;
+    color:#fff;
+    text-align:center;
+    padding:10px;
 }
 
-ul.footer-content {
-    display: inline-block;
-    text-align: center;
-    list-style-type: none;
-    padding: 0;
+
+.footer-content {
+    display:inline-block;
+    list-style-type:none;
+    padding:0;
 }
 
-@media (min-width: 768px) {
-    .logo {
-        font-size: 48px;
+@media (min-width:700px) {
+    #grid-container{
+        grid-template-areas: "top top top" "content content content" "bottom bottom bottom";
     }
+    .logo{
+        font-size:48px;
+    }
+    .menu{
+        display:none;
+    }
+    .menu-desktop{
+        display:block;
+        padding:10px;
+        border-bottom: 1.5px solid;
+    }
+
+    header{
+        padding:0;
+    }
+
+    .nav-article{
+        display:none;
+    }
+
+    .articles{
+        flex-grow:1;
+    }
+
+    .nav-section-desktop{
+        display:flex;
+        list-style-type:none;
+        align-content:start;
+        margin:0;
+        padding:0;
+        gap:30px;
+        font-size:20px;
+        margin-left:5px;
+    }
+
+    .nav-section-desktop{
+        padding:5px;
+    }
+
+
+
+    .default-flex{
+        grid-area:content;
+        justify-content:center;
+        display:flex;
+    }
+
+    footer nav ul li{
+        display:inline-flex;
+
+    }
+
 }

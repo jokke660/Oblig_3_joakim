@@ -3,7 +3,11 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/styleindex.css" type="text/css">
+        <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" type="text/css">
+        <link href="css/font/css/fontawesome.css" rel="stylesheet">
+        <link href="css/font/css/brands.css" rel="stylesheet">
+        <link href="css/font/css/solid.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/styleindex2.css" type="text/css">
         <script src="https://kit.fontawesome.com/8d18eb631b.js" crossorigin="anonymous"></script>
         <title>Forside</title>
 
@@ -11,29 +15,66 @@
     <body>
     <div id="grid-container">
         <header>
+            <!--header mobil-->
+            <div class="menu">
+                <section>
+                    <nav>
+                        <i class="fa-solid fa-bars"></i>
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </nav>
+                    <a href="index.html" class="logo">SKOBUTIKK</a>
+                    <nav>
+                        <i class="fa-regular fa-user"></i>
+                        <a href="handlekurv.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </nav>
+                </section>
+            </div>
+            <!--header desktop-->
+            <div class="menu-desktop">
+                <section>
+                    <a href="index.html" class="logo">SKOBUTIKK</a>
+                    <input type="text" placeholder="Søk">
+                    <img src="img/logginn.jpg">
+                    <img src="img/handlekurv.jpg">
+
+                </section>
+            </div>
+            <section class="nav-section-desktop">
+                <li>MERKER</li>
+                <li>TILBUD</li>
+                <li>BARN</li>
+                <li>DAME</li>
+                <li>HERRE</li>
+            </section>
             
-            <nav class="menu">
-                <button class="header-btn">☰</button>
-                <button class="header-btn">⌕</button>
-                <a href="index.html" class="logo">Skobutikk</a>
-                <button class="header-btn">ጸ</button>
-                <a href="handlekurv.html"><button class="header-btn">🛒</button></a>
-
-            </nav>
-
         </header>
-
+ 
         <main>
             <section class="default-flex"> 
-                <article>
-                    <img src="img/placeholder.jpg">
-                    <h3>Handle etter avdeling</h3>
+                <article class="nav-article">
+                    <img src="img/topp.jpg">
+                    <h2>Handle etter avdeling</h2>
+                    <nav>
+                        <button>Dame</button>
+                        <button>Herre</button>
+                        <button>Barn</button>
+                    </nav>
                 </article>
-                <article>
-                    <img src="img/placeholder.jpg">
-                    <h3>[MERKENAVN]</h3>
+                <section class="articles">
+                    <article id="main-article">
+                        <img src="img/placeholder.jpg">
+                        <h3>[MERKENAVN]</h3>
+                        <p>30% rabatt</p>
+                    </article>
+                    <article id="sub-article1">
+                        <img src="img/placeholder.jpg">
+                        <h3>[MERKENAVN]</h3>
+                    </article>
+                    <article id="sub-article2">
+                        <img src="img/placeholder.jpg">
+                        <h3>[MERKENAVN]</h3>
                 </article>
-
+            </section>
             </section>
 
         </main>
