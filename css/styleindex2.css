@@ -16,7 +16,7 @@ body{
     background-color: #efefef;
 }
 
-#grid-container {
+#grid-forside {
     display:grid;
     grid-template-areas: "top" "content" "bottom";
     margin:0;
@@ -91,7 +91,7 @@ main {
     flex:1;
 }
 
-main section article nav{
+.nav-article nav{
     display:flex;
     justify-content:space-between;
     position:absolute;
@@ -101,6 +101,7 @@ main section article nav{
     
 }
 
+/*innhold forside*/
 .default-flex{
     display:flex;
     flex-direction:column;
@@ -157,9 +158,89 @@ footer {
     padding:0;
 }
 
+/*Produktside start*/
+#grid-produkt{
+    display:grid;
+    grid-template-areas: "top" "content" "bottom";
+    margin:0;
+    padding:0;
+    overflow:hidden;
+
+}
+
+.handlekurv-flex{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    grid-area:content;
+
+}
+
+
+#breadcrumbs{
+    list-style:none;
+    display:inline-flex;
+    gap:10px;
+    font-size:16px;
+    padding:0;
+
+}
+
+.produkt{
+    flex-wrap:wrap;
+    align-items:center;
+}
+
+#preview{
+    display: flex;
+    justify-content: center;
+    padding-top:10px;
+    gap:15px;
+}
+
+.produkt nav{
+    text-align:center;
+}
+
+.produkt span{
+    text-align:left;
+}
+
+#size-btn{
+    display:flex;
+    justify-content:space-around;
+    gap:30px;
+    list-style: none;
+    padding:0;
+}
+
+#size-btn button{
+    background-color:#D9D9D9;
+    border:none;
+    font-size:30px;
+
+}
+
+.produkt a button{
+    background-color:#80C866;
+    border:none;
+    height:40px;
+}
+
+/*Produktside end*/
+
+
+/*Handlekurv start*/
+/*Handlekurv end*/
+
 @media (min-width:700px) {
-    #grid-container{
+    #grid-forside{
         grid-template-areas: "top top top" "content content content" "bottom bottom bottom";
+    }
+
+    #grid-produkt{
+        grid-template-areas: "top top top" "content content content" "bottom bottom bottom"
     }
     .logo{
         font-size:48px;

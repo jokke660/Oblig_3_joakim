@@ -13,7 +13,7 @@
 
     </head>
     <body>
-    <div id="grid-container">
+    <div id="grid-produkt">
         <header>
             <!--header mobil-->
             <div class="menu">
@@ -34,16 +34,57 @@
                 <section>
                     <a href="index.html" class="logo">SKOBUTIKK</a>
                     <input type="text" placeholder="Søk">
-                    <img src="img/logginn.jpg">
-                    <img src="img/handlekurv.jpg">
+                    <img src="img/logginn.jpg" alt="logginn">
+                    <img src="img/handlekurv.jpg" alt="handlekurv">
 
                 </section>
             </div>
+            <nav>
+                <ul class="nav-section-desktop">
+                    <li>MERKER</li>
+                    <li>TILBUD</li>
+                    <li>BARN</li>
+                    <li>DAME</li>
+                    <li>HERRE</li>
+                </ul>
+            </nav>
+            
         </header>
  
         <main>
-            <section class="default-flex"> 
+            <section class="handlekurv-flex">
+                <ul id="breadcrumbs">
+                    <li><a href="index.html">Hjem</a></li> /
+                    <li>Herresko</li> /
+                    <li>Pensko</li> /
+                    <li>[Merke]</li>
+                </ul>
+                <article class="produkt">
+                    <nav>
+                    <img src="img/placeholder.jpg" alt="placeholer">
+                        <section id="preview">
+                        <i class="fa-solid fa-circle"></i>
+                        <i class="fa-regular fa-circle"></i>
+                        <i class="fa-regular fa-circle"></i>
+                    </section>
+                    </nav>
+                    <span>
+                        <h3>NAVN PRODUSENT</h3>
+                        <h2>SKO NAVN / MERKE</h2>
+                        <h3>799,-</h3>
+                    </span>
+                    <ul id="size-btn">
+                        <button>41</button>
+                        <button>42</button>
+                        <button>43</button>
+                        <button>44</button>
+                        <button>45</button>
+                    </ul>
+                    <a href="handlekurv.html">
+                        <button><i class="fa-solid fa-cart-shopping"></i>   Legg i handlekurv</button>
+                    </a>
 
+                </article>
             </section>
 
         </main>
