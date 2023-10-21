@@ -161,11 +161,21 @@ footer {
 /*Produktside start*/
 #grid-produkt{
     display:grid;
-    grid-template-areas: "top" "content" "bottom";
+    grid-template-areas:
+        "top"
+        "content"
+        "aside"
+        "bottom";
+
     margin:0;
     padding:0;
     overflow:hidden;
 
+}
+
+#aside{
+    grid-area:aside;
+    padding:20px;
 }
 
 .handlekurv-flex{
@@ -222,10 +232,49 @@ footer {
 
 }
 
+.produkt a{
+    text-decoration:none;
+}
+
 .produkt a button{
+    display:flex;
+    justify-content:left;
+    margin:15px;
+    padding-top:7px;
+    margin-left:0;
+
+
+}
+
+#produktbeskrivelse{
+    text-align:left;
+    background-color:#D9D9D9;
+}
+
+#produktbeskrivelse h4{
+    padding-top:10px;
+    padding-left:5px;
+}
+
+#produktbeskrivelse p{
+    padding-left:5px;
+    padding-bottom:10px;
+}
+
+#handlekurv-btn{
     background-color:#80C866;
     border:none;
     height:40px;
+}
+
+
+#størrelsesguide-btn{
+    background-color:#D9D9D9;
+    border:none;
+    height:40px;
+    padding-left:28px;
+    padding-right:28px;
+
 }
 
 /*Produktside end*/
