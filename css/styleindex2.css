@@ -110,7 +110,8 @@ main {
     
 }
 
-/*innhold forside*/
+
+
 .default-flex{
     display:flex;
     flex-direction:column;
@@ -286,15 +287,89 @@ footer {
 
 }
 
+#størrelsesguide-btn-desktop{
+    display:none;
+}
+
+#brukeranmeldelser-btn{
+    display:none;
+}
+
+#suggestions{
+    display:none;
+}
+
+#suggestions-txt{
+    display:none;
+}
+
 /*Produktside end*/
 
 
 /*Handlekurv start*/
+#grid-handlekurv{
+    display:grid;
+    grid-template-areas:
+        "top"
+        "content"
+        "bottom";
+
+    margin:0;
+    padding:0;
+    overflow:hidden;
+
+
+}
+
+.handlekurv-flex{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:left;
+    grid-area:content;
+}
+
+.handlekurv-flex section i{
+    display:flex;
+    position:relative;
+    left:330px;
+
+}
+
+.handlekurv-flex section a{
+    color:black;
+    
+}
+
+#order-btns{
+    display:flex;
+    flex-direction:column;
+    gap:30px;
+    width:330px;
+}
+
+#completeorder{
+    background-color:#80C866;
+    border:none;
+    height:60px;
+}
+
+#continueshopping{
+    background-color:#D9D9D9;
+    border:none;
+    height:50px;
+}
+
+
 /*Handlekurv end*/
 
 @media (min-width:700px) {
     #grid-forside{
         grid-template-areas: "top top top" "content content content" "bottom bottom bottom";
+    }
+
+    body{
+        display:flex;
     }
 
     .logo{
@@ -363,7 +438,12 @@ footer {
     /*Produktside start*/
 
     #grid-produkt{
-        grid-template-areas: "top top top" "content content content" "aside aside aside" "bottom bottom bottom"
+        grid-template-areas: 
+            "top top top" 
+            "content content content" 
+            "aside aside aside" 
+            "bottom bottom bottom";
+            grid-template-columns: 1fr 1fr 1fr;
     }
 
     #produktbeskrivelse{
@@ -372,28 +452,141 @@ footer {
 
     .produkt-flex{
         display:flex;
-        flex-shrink:1;
+        flex-direction:column;
+        flex-wrap:wrap;
     
     }
 
     .produkt{
-        display:flex;
-        align-items:left;
+        display:grid;
     }
 
-    .produkt nav{
-        padding:50px;
+    .produkt span{
+        padding-right:100px;
+    }
+
+    #produkt-txt{
+        margin-left:50px;
     }
 
     .produkt nav img{
-        width:400px;
+        width:450px;
+        height:500px;
     }
 
 
-    
+    #size-btn{
+        display:-ms-inline-grid;
+        grid-area:content;
+        grid-column:2;
+
+    }
+
+    #expand-btn{
+        display:grid;
+        grid-area:content;
+        grid-column:3;
+
+    }
 
 
-    
+    #handlekurv-btn-a{
+        margin-left:20px;
+        margin:50px;
+        display:grid;
+        grid-area:content;
+        grid-column:2;
+
+    }
+
+
+    #størrelsesguide-btn{
+        display:none;
+    }
+
+    #størrelsesguide-btn-desktop{
+        display:grid;
+        border-radius:20px;
+
+    }
+
+    #brukeranmeldelser-btn{
+        border-radius:20px;
+        display:grid;
+
+    }
+
+    #suggestions{
+        display:flex;
+        flex-direction:row;
+        justify-content:space-around;
+
+    }
+
+    #suggestions-txt{
+        display:flex;
+    }
+
+
+
     /*Produktside end*/
+
+    /*Handlekurv start*/
+    #grid-handlekurv{
+        grid-template-areas: 
+        "top top top" 
+        "content content content" 
+        "bottom bottom bottom";
+        grid-template-columns: 1fr 1fr 1fr;
+        flex-direction:row;
+    }
+
+    .handlekurv-flex{
+        display:grid;
+
+    }
+
+    .handlekurv-flex section{
+        display:flex;
+        justify-content:space-between;
+        margin:20px;
+    }
+
+    .handlekurv-flex section h1{
+    }
+
+    .handlekurv-flex section img{
+        height:200px;
+    }
+
+
+    .handlekurv-flex section h2{
+        margin-left:20px;
+
+    }
+
+    .handlekurv-flex section p{
+        font-size:17px;
+        margin:20px;
+        white-space:nowrap;
+
+    }
+
+    .product-info{
+    }
+
+
+    #totprice{
+        display:block;
+        background-color:#CECECE;
+    }
+
+    #completeorder{
+        height:90px;
+    }
+
+
+
+    /*Handlekurv end*/
 
 }
