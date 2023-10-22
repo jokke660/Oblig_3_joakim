@@ -28,6 +28,13 @@ header {
     grid-area:top;
     border-bottom: 1.5px solid #000000;
     padding:15px;
+    width:100%;
+    position:fixed;
+    background-color:white;
+    z-index:1; /*Med z-index kan man bestemme hvilke elementer som skal være synlige
+                hvis de overlapper hverandre. z-index: 1 vil si at header har prioritet
+                over elementer med en lavere (0) eller ingen z-index verdi.
+                Et element med en høyere verdi ville overlappet headeren. */
 }
 
 .nav-section-desktop{
@@ -74,6 +81,7 @@ header {
 }
 
 
+
 .logo {
     text-decoration:none;
     color: #DDF15C;
@@ -89,6 +97,7 @@ main {
     grid-area:content;
     padding:20px;
     flex:1;
+    margin-top:50px;
 }
 
 .nav-article nav{
@@ -178,7 +187,7 @@ footer {
     padding:20px;
 }
 
-.handlekurv-flex{
+.produkt-flex{
     display:flex;
     flex-direction:column;
     align-items:center;
@@ -288,9 +297,6 @@ footer {
         grid-template-areas: "top top top" "content content content" "bottom bottom bottom";
     }
 
-    #grid-produkt{
-        grid-template-areas: "top top top" "content content content" "bottom bottom bottom"
-    }
     .logo{
         font-size:48px;
     }
@@ -301,6 +307,17 @@ footer {
         display:block;
         padding:10px;
         border-bottom: 1.5px solid;
+
+    }
+
+    .menu-desktop input{
+        position:relative;
+        top:-6px;
+
+    }
+
+    main{
+        margin-top:100px;
     }
 
     header{
@@ -342,5 +359,41 @@ footer {
         display:inline-flex;
 
     }
+
+    /*Produktside start*/
+
+    #grid-produkt{
+        grid-template-areas: "top top top" "content content content" "aside aside aside" "bottom bottom bottom"
+    }
+
+    #produktbeskrivelse{
+        background-color:#efefef;
+    }
+
+    .produkt-flex{
+        display:flex;
+        flex-shrink:1;
+    
+    }
+
+    .produkt{
+        display:flex;
+        align-items:left;
+    }
+
+    .produkt nav{
+        padding:50px;
+    }
+
+    .produkt nav img{
+        width:400px;
+    }
+
+
+    
+
+
+    
+    /*Produktside end*/
 
 }
