@@ -18,7 +18,11 @@ body{
 
 #grid-forside {
     display:grid;
-    grid-template-areas: "top" "content" "bottom";
+    grid-template-areas: 
+        "top" 
+        "content" 
+        "bottom";
+
     margin:0;
     padding:0;
     overflow:hidden;
@@ -50,7 +54,8 @@ header {
 
 .menu section nav{
     display:flex;
-    gap:1em;
+    gap:1em; /*Separerer knappene i header, em = equal to the current font size
+    https://kb.blackbaud.com/knowledgebase/Article/24159*/
     
 }
 
