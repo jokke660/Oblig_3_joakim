@@ -77,7 +77,7 @@ header {
 }
 
 .menu-desktop{
-    display:none;
+    display:none; /*header design for desktop vises ikke*/
 }
 
 
@@ -370,6 +370,7 @@ footer {
 
 /*Handlekurv end*/
 
+/*Media query for desktop, minimum bredde 960px*/
 @media (min-width:960px) {
     #grid-forside{
         grid-template-areas: "top top top" "content content content" "bottom bottom bottom";
@@ -383,12 +384,12 @@ footer {
         font-size:48px;
     }
     .menu{
-        display:none;
+        display:none; /*header design for mobil vises ikke*/
     }
     .menu-desktop{
         display:block;
         padding:10px;
-        border-bottom: 1.5px solid;
+        border-bottom: 1.5px solid; /*header design for desktop vises*/
 
     }
 
@@ -433,9 +434,9 @@ footer {
         display:flex;
     }
 
-    footer nav ul li{
-        display:inline-flex;
-
+    .footer-content{
+        display:flex;
+        justify-content:space-around;
     }
 
     .subarticles{
@@ -473,6 +474,10 @@ footer {
         background-color:#efefef;
     }
 
+    #produktbeskrivelse p{
+        font-size:25px;
+    }
+
     .produkt-flex{
         display:flex;
         flex-direction:column;
@@ -498,9 +503,6 @@ footer {
         height:500px;
     }
 
-    #breadcrumbs{
-    }
-
 
     #size-btn{
         display:-ms-inline-grid;
@@ -523,6 +525,7 @@ footer {
 
     #handlekurv-btn{
         height:60px;
+        cursor:pointer;
 
     }
 
@@ -614,6 +617,13 @@ footer {
 
     #completeorder{
         height:90px;
+    }
+
+    #continueshopping-top{
+        margin:0;
+        padding-top:50px;
+        font-size:24px;
+
     }
 
     #continueshopping{
