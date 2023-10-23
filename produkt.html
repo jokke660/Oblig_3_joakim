@@ -7,7 +7,7 @@
         <link href="css/font/css/fontawesome.css" rel="stylesheet">
         <link href="css/font/css/brands.css" rel="stylesheet">
         <link href="css/font/css/solid.css" rel="stylesheet">
-        <link rel="stylesheet" href="css/styleindex2.css" type="text/css">
+        <link rel="stylesheet" href="css/stylesheet.css" type="text/css">
         <script src="https://kit.fontawesome.com/8d18eb631b.js" crossorigin="anonymous"></script>
         <title>Produkt</title>
 
@@ -35,7 +35,7 @@
                     <a href="index.html" class="logo">SKOBUTIKK</a>
                     <input type="text" placeholder="Søk">
                     <img src="img/logginn.jpg" alt="logginn">
-                    <img src="img/handlekurv.jpg" alt="handlekurv">
+                    <a href="handlekurv.html"><img src="img/handlekurv.jpg" alt="handlekurv"></a>
 
                 </section>
             </div>
@@ -54,10 +54,10 @@
         <main>
             <section class="produkt-flex">
                 <ul id="breadcrumbs">
-                    <li><a href="index.html">Hjem</a></li> /
-                    <li>Herresko</li> /
-                    <li>Pensko</li> /
-                    <li>[Merke]</li>
+                    <li><a href="index.html">Hjem /</a></li> 
+                    <li>Herresko /</li> 
+                    <li>Pensko /</li>
+                    <li>[Merke] </li>
                 </ul>
                 <article class="produkt">
                     <nav>
@@ -68,34 +68,27 @@
                         <i class="fa-regular fa-circle"></i>
                     </section>
                     </nav>
-                    <span id="produkt-txt">
-                        <h3>NAVN PRODUSENT</h3>
-                        <h2>SKO NAVN / MERKE</h2>
-                        <h3>799,-</h3>
-                    </span>
+                    <div id="produkt-txt">
+                        <h2>NAVN PRODUSENT</h2>
+                        <h3>SKO NAVN / MERKE</h3>
+                        <h4>799,-</h4>
+                        <p>Velg størrelse:</p>
+                    </div>
                     <ul id="size-btn">
-                        <button>41</button>
-                        <button>42</button>
-                        <button>43</button>
-                        <button>44</button>
-                        <button>45</button>
+                        <li>41</li>
+                        <li>42</li>
+                        <li>43</li>
+                        <li>44</li>
+                        <li>45</li>
                     </ul>
                     <span>
-                        <a id="handlekurv-btn-a" href="handlekurv.html">
-                            <button id="handlekurv-btn"><i class="fa-solid fa-cart-shopping"></i>   Legg i handlekurv</button>
-                        </a>
-                        <a href="#">
-                            <button id="størrelsesguide-btn">Størrelsesguide</button>
-                        </a>
+                        <button onclick="window.location.href='handlekurv.html';" id="handlekurv-btn"><i class="fa-solid fa-cart-shopping"></i>   Legg i handlekurv</button>
+                        <button id="størrelsesguide-btn">Størrelsesguide</button>
                     </span>
                     <!--Desktop elements-->
                     <span id="expand-btn">
-                        <a href="#">
-                            <button id="brukeranmeldelser-btn">Brukeranmeldelser +</button>
-                        </a>
-                        <a>
-                            <button id="størrelsesguide-btn-desktop">Størrelsesguide +</button>
-                        </a>
+                        <button id="brukeranmeldelser-btn">Brukeranmeldelser +</button>
+                        <button id="størrelsesguide-btn-desktop">Størrelsesguide +</button>
                     </span>
     
                 </article>
@@ -133,3 +126,5 @@
     </body>
 
 </html>
+
+<!--divs:4/5-->

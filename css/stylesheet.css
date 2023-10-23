@@ -30,7 +30,7 @@ header {
     padding:15px;
     width:100%;
     position:fixed;
-    background-color:white;
+    background-color:#efefef;
     z-index:1; /*Med z-index kan man bestemme hvilke elementer som skal være synlige
                 hvis de overlapper hverandre. z-index: 1 vil si at header har prioritet
                 over elementer med en lavere (0) eller ingen z-index verdi.
@@ -207,6 +207,7 @@ footer {
 
 }
 
+
 .produkt{
     flex-wrap:wrap;
     align-items:center;
@@ -233,6 +234,11 @@ footer {
     gap:30px;
     list-style: none;
     padding:0;
+}
+
+#size-btn li{
+    background-color:#CECECE;
+    padding:5px;
 }
 
 #size-btn button{
@@ -284,6 +290,7 @@ footer {
     height:40px;
     padding-left:28px;
     padding-right:28px;
+    margin-top:20px;
 
 }
 
@@ -363,7 +370,7 @@ footer {
 
 /*Handlekurv end*/
 
-@media (min-width:700px) {
+@media (min-width:960px) {
     #grid-forside{
         grid-template-areas: "top top top" "content content content" "bottom bottom bottom";
     }
@@ -403,10 +410,6 @@ footer {
         display:none;
     }
 
-    .articles{
-        flex-grow:1;
-    }
-
     .nav-section-desktop{
         display:flex;
         list-style-type:none;
@@ -433,6 +436,26 @@ footer {
     footer nav ul li{
         display:inline-flex;
 
+    }
+
+    .subarticles{
+        display:flex;
+        justify-content:center;
+        gap:50px;
+        flex-direction:row;
+    }
+
+    #main-article img{
+        width:600px;
+
+    }
+
+    #sub-article1 img{
+        width:275px
+    }
+
+    #sub-article2 img{
+        width:275px
     }
 
     /*Produktside start*/
@@ -467,6 +490,7 @@ footer {
 
     #produkt-txt{
         margin-left:50px;
+        text-align:left;
     }
 
     .produkt nav img{
@@ -474,11 +498,17 @@ footer {
         height:500px;
     }
 
+    #breadcrumbs{
+    }
+
 
     #size-btn{
         display:-ms-inline-grid;
         grid-area:content;
         grid-column:2;
+        position:relative;
+        top:-120px;
+        left:50px
 
     }
 
@@ -486,16 +516,13 @@ footer {
         display:grid;
         grid-area:content;
         grid-column:3;
+        gap:20px;
 
     }
 
 
-    #handlekurv-btn-a{
-        margin-left:20px;
-        margin:50px;
-        display:grid;
-        grid-area:content;
-        grid-column:2;
+    #handlekurv-btn{
+        height:60px;
 
     }
 
@@ -552,8 +579,6 @@ footer {
         margin:20px;
     }
 
-    .handlekurv-flex section h1{
-    }
 
     .handlekurv-flex section img{
         height:200px;
@@ -565,28 +590,37 @@ footer {
 
     }
 
-    .handlekurv-flex section p{
+
+    #product-info1{
+        display:block;
         font-size:17px;
-        margin:20px;
-        white-space:nowrap;
+
 
     }
 
-    .product-info{
+    #product-info2{
+        display:block;
+        font-size:17px;
     }
+
 
 
     #totprice{
         display:block;
         background-color:#CECECE;
+        font-size:24px;
+        padding:10px
     }
 
     #completeorder{
         height:90px;
     }
 
-
+    #continueshopping{
+        height:80px;
+    }
 
     /*Handlekurv end*/
 
 }
+
